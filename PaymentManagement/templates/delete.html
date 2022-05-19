@@ -1,0 +1,5 @@
+<form method="POST"> {% csrf_token %}
+    <p>Quer mesmo apagar o contrato?</p>
+    <input type="submit" value="Sim"/>
+</form>
+<a href={% url 'contrato:contrato-list' %}><button>Não</button></a>

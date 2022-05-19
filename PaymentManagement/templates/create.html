@@ -1,0 +1,23 @@
+<script>
+    function Hide() {
+        if(document.querySelector(`input[type="radio"][name=periodicidade]:checked`).value == "diário") {
+            var a = document.getElementById('id_dias')
+            var b = a.parentNode
+            b.style.display = "none"
+        } else {
+            var a = document.getElementById('id_dias')
+            var b = a.parentNode
+            b.style.display = ""
+        }
+    }
+    
+    window.onload = function() {
+        document.getElementById('id_periodicidade').onchange = Hide;
+    };
+</script>
+{% block content %}
+<form method="POST"> {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" value="Save"/>
+</form>
+{% endblock %}
