@@ -1,0 +1,9 @@
+<strong>Ver Tabelas</strong>
+<br>
+{% block content %}
+{% for t in tabelas %}
+    <p>{{t.parqueid.nome}} | {{t.preco_por_hora}} | {{t.taxa_por_hora}} | {{t.taxa_noturna}} | {{t.taxa_da_multa}} - <button><a href="/update_table/{{t.id}}">Alterar</a></button> <button><a href="/delete_table/{{t.id}}">Apagar</a></button></p>
+{% endfor %}
+<br>
+<button><a href="/">Página principal</a></button>
+{% endblock %}

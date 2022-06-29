@@ -1,0 +1,12 @@
+<strong>Ver Reservas</strong>
+<br>
+{% block content %}
+{% for r in reservas %}
+    <p>{{r.id}} | {{r.parqueid.nome}} | {{r.viaturaid.matricula}} | {{r.data_de_inicio}} | {{r.data_de_termino}} | {{r.hora_de_inicio}} | {{r.hora_de_termino}} - <button><a href="/update/{{r.id}}">Alterar</a></button> <button><a href="/delete/{{r.id}}">Apagar</a></button></p>
+{% endfor %}
+{% for p in parque %}
+    {{ p.nome }}
+{% endfor %}
+<br>
+<button><a href="/">Página principal</a></button>
+{% endblock %}

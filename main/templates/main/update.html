@@ -1,0 +1,9 @@
+<strong>Alterar Reserva</strong>
+<br>
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p><button type="submit">Alterar</button></p>
+</form>
+{% endblock %}

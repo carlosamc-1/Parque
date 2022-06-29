@@ -1,0 +1,9 @@
+<strong>Criar Tabela</strong>
+<br>
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p><button type="submit">Criar</button></p>
+</form>
+{% endblock %}

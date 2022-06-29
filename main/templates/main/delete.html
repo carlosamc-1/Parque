@@ -1,0 +1,12 @@
+{% block content %}
+<p>Tem a certeza que quer apagar esta reserva?</p>
+
+<form method="POST">
+    {% csrf_token %}
+    <p><button type="submit">Sim</button></p>
+</form>
+<br>
+<a href="/read">
+    <button>Não</button>
+</a>
+{% endblock %}
